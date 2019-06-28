@@ -1,0 +1,50 @@
+databaseChangeLog:
+  - changeSet:
+      id: create attendance table
+      author: akram
+      changes:
+        - createTable:
+            tableName: attendance
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: student_id
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: date
+                  type: timestamp
+                  constraints:
+                    nullable: true
+              - column:
+                  name: roll
+                  type: int
+                  constraints:
+                    nullable: true
+              - column:
+                  name: status
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: department
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: semester
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: subject
+                  type: varchar(255)
+                  constraints:
+                    nullable: true

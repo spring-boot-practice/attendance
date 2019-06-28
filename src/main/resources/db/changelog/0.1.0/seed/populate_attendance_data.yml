@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: populate dummy attendance
+      author: akram
+      context: mockaroo
+      changes:
+        - loadData:
+            file: data/attendance.csv
+            relativeToChangelogFile: true
+            separator: ","
+            tableName: attendance
+            context: dev
+            columns:
+              - column:
+                  name: id
+                  type: numeric
+              - column:
+                  name: student_id
+                  type: numeric
+              - column:
+                  name: date
+                  type: timestamp
+              - column:
+                  name: roll
+                  type: numeric
+              - column:
+                  name: status
+                  type: string
+              - column:
+                  name: department
+                  type: string
+              - column:
+                  name: semester
+                  type: string
+              - column:
+                  name: subject
+                  type: string

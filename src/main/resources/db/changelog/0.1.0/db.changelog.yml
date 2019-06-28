@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: structure/attendance_table.yml
+      relativeToChangelogFile: true
+  - include:
+      file: structure/student_table.yml
+      relativeToChangelogFile: true
+  - include:
+      file: seed/populate_attendance_data.yml
+      relativeToChangelogFile: true
+  - include:
+      file: seed/populate_student_data.yml
+      relativeToChangelogFile: true

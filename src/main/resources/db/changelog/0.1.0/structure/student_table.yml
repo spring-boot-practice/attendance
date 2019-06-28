@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: create student table
+      author: akram
+      changes:
+        - createTable:
+            tableName: student
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: roll
+                  type: int
+                  constraints:
+                    nullable: true
+              - column:
+                  name: registration_number
+                  type: bigint
+                  constraints:
+                    nullable: true
+              - column:
+                  name: full_name
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: department
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: semester
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
