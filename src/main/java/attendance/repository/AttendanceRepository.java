@@ -11,8 +11,8 @@ public interface AttendanceRepository extends JpaRepository<Attendance, Long> {
     List<Attendance> findAllByDepartmentAndSemesterAndSubjectAndDateBetweenOrderByRollAsc(
             String department, String semester, String subject, Instant start, Instant end);
 
-    List<Attendance> findAllByStudentIdAndDateBetweenOrderByDateAsc(
-            Long studentId, Instant start, Instant end);
+    List<Attendance> findAllByStudentIdAndSubjectAndDateBetweenOrderByDateAsc(
+            Long studentId, String subject, Instant start, Instant end);
     
     int countAllByStudentIdAndStatusAndDateBetween(Long studentId, String status, Instant start, Instant end);
 }
